@@ -21,6 +21,61 @@
         .font-latin {
             font-family: "Arizonia", cursive;
         }
+        .bungas {
+            position: absolute;
+            width: 50%;
+        }
+
+        .bunga-atas-kiri {
+            top: -7%;
+            left: -15%;
+        }
+
+        .bunga-atas-kanan {
+            top: -7%;
+            right: -15%;
+        }
+
+        .bunga-bawah-kiri {
+            bottom: -10%;
+            left: -30%;
+            rotate: 25deg;
+            animation: sways 5s ease-in-out infinite both;
+            transform-origin: bottom;
+        }
+
+        .bunga-bawah-kanan {
+            bottom: -10%;
+            right: -35%;
+            rotate: -25deg;
+            animation: sways2 5s ease-in-out infinite both;
+            transform-origin: bottom;
+            z-index: 0;
+        }
+
+        @keyframes sways {
+
+            0%,
+            100% {
+                rotate: 20deg;
+            }
+
+            50% {
+                rotate: 30deg;
+            }
+        }
+
+        @keyframes sways2 {
+
+            0%,
+            100% {
+                rotate: -20deg;
+            }
+
+            50% {
+                rotate: -30deg;
+            }
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -29,6 +84,12 @@
         class="overflow-hidden relative text-center mx-auto h-screen w-full max-w-md flex items-center justify-center flex-col"
         style="background-color: #D2EBE8;"
     >
+        <div class="bunga">
+            <img src="images/flower-top-left.png" alt="flowers" class="bungas bunga-atas-kiri">
+            <img src="images/flower-top-right.png" alt="flowers" class="bungas bunga-atas-kanan">
+            <img src="images/flower-bottom-left.png" alt="flowers" class="bungas bunga-bawah-kiri">
+            <img src="images/flower-bottom-right.png" alt="flowers" class="bungas bunga-bawah-kanan">
+        </div>
         <div style="position: relative; z-index: 99;">
             <div class="mb-5" data-aos="zoom-in" data-aos-duration="3000">The Wedding Of</div>
             <div class="mb-4 mx-auto size-44 rounded-full overflow-hidden" data-aos="flip-up" data-aos-duration="3000">
